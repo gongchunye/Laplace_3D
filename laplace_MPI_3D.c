@@ -144,7 +144,7 @@ int main(int argc, char *argv[]) {
     char pe_num[20];
     snprintf(pe_num, sizeof(pe_num), "%d", my_PE_num); //itoa
     strcat(pe_num, values);
-    char filename2[] = "bovf";
+    char filename2[40] = "bovf";
     strcat(filename2, pe_num);
 
     f_double = fopen(filename2, "wb");
@@ -162,7 +162,7 @@ int main(int argc, char *argv[]) {
     char pe_num2[20];
     snprintf(pe_num2, sizeof(pe_num2), "%d", my_PE_num); //itoa
     strcat(pe_num2, bov);
-    char filename[] = "laplacef";
+    char filename[40] = "laplacef";
     strcat(filename, pe_num2);
     f_bov = fopen(filename, "wb");
     if (f_bov == NULL) {
