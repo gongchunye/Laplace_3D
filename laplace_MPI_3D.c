@@ -84,9 +84,14 @@ int main(int argc, char *argv[]) {
         for(i = 1; i <= ROWS; i++) {
             for(j = 1; j <= COLUMNS; j++){
                 for(k = 1; k <= LAYERS; k++) {
-                    Temperature[i][j][k] = (Temperature_last[i+1][j][k] + Temperature_last[i-1][j][k] +
-                                            Temperature_last[i][j+1][k] + Temperature_last[i][j-1][k] +
-                                            Temperature_last[i][j][k+1] + Temperature_last[i][j][k-1])/6;
+					//Jacobi
+                    // Temperature[i][j][k] = (Temperature_last[i+1][j][k] + Temperature_last[i-1][j][k] +
+                                            // Temperature_last[i][j+1][k] + Temperature_last[i][j-1][k] +
+                                            // Temperature_last[i][j][k+1] + Temperature_last[i][j][k-1])/6;
+					//Gauss-Seidel
+                    Temperature[i][j][k] = (Temperature_last[i+1][j][k] + Temperature[i-1][j][k] +
+                                            Temperature_last[i][j+1][k] + Temperature[i][j-1][k] +
+                                            Temperature_last[i][j][k+1] + Temperature[i][j][k-1])/6;
                 }
             }
         }
