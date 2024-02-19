@@ -68,7 +68,7 @@ int main(int argc, char *argv[]) {
 
     // PE 0 asks for input
     if (myid==0) {
-      max_iterations= 1000; 
+      max_iterations= 4000; 
         printf("Maximum iterations [100-4000]?\n");
         //scanf("%d", &max_iterations);
     }
