@@ -1,3 +1,6 @@
+
+1)-------------------------------------------------------------
+old readme
 # Laplace_3D
 Uses MPI parallel programming to code laplace equation in 3D
 
@@ -21,9 +24,30 @@ mpicc laplace_MPI_3D.c
 mpirun -n 4 a.out
 
 Maximum iterations [100-4000]?
-
 >>4000 (converges at 3424)
 
 
 The code will output files depending on PE number, each of which can be run through VisIt
 producing sections of the cube.
+
+2)-------------------------------------------------------------
+
+how to change max_iterations?
+max_iterations= 1000; 
+
+3)-------------------------------------------------------------
+how to change MPI process number:
+#define NPES           4       // number of processors
+
+4)-------------------------------------------------------------
+how to change problem size:
+#define ROWS_GLOBAL  100         // this is a "global" row count
+
+
+5)-------------------------------------------------------------
+may be trouble for big simulation with double Temperature[ROWS+2][COLUMNS+2][LAYERS+2];
+static allocate memory
+
+6) not test for too large problem size
+
+
