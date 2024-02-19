@@ -80,7 +80,7 @@ int main(int argc, char *argv[]) {
     initialize(npes, myid);
     
     while ( dt_global > MAX_TEMP_ERROR && iteration <= max_iterations ) {
-        // main calculation: average my four neighbors
+        // main calculation: average my six neighbors
         for(i = 1; i <= ROWS; i++) {
             for(j = 1; j <= COLUMNS; j++){
                 for(k = 1; k <= LAYERS; k++) {
