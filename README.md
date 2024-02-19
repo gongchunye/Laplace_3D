@@ -50,4 +50,6 @@ static allocate memory
 
 6) not test for too large problem size
 
+7) results see: https://www.ydma.com/article-22532-1.html
+
 
